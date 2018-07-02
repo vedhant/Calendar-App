@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Appointments</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+    <link href="/assets/appointment.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <% include partials/nav.ejs %>
+    <div id="add-appointment">
+      <h3>Add Appointments :</h3>
+      <div class="error">
+
+      </div>
+      <form>
+        <span>Title</span>
+        <input type="text" placeholder="Enter title" name="app_title" class="app_input" required />
+        <span>Description</span>
+        <input type="text" placeholder="Enter description" name="app_description" class="app_input" required />
+        <span>Date</span>
+        <input type="date" name="app_date" required />
+        <span>Starting time</span>
+        <input type="time" name="app_start"/>
+        <span>Ending time</span>
+        <input type="time" name="app_end"/>
+        <span>Meet user</span>
+        <input type="text" name="meeting_user" required />
+        <button type="submit">Add</button>
+      </form>
+    </div>
+
+    <div class="appointment-list">
+      <div class="accepted_appointments">
+        <h4>Your Appointments</h4>
+        <ul>
+          <% accepted_appointments.forEach(function(a){ %>
+            <li>
+              <span class="label">Title </span>
+              <span class="title"><%= a.title %></span>
+              <span class="label">Date </span>
+              <span class="date"><%= a.date %></span>
+              <span class="label">Meeting </span>
+              <span class="meeting_user"><%= a.meeting_user %></span>
+              <button class="remove" name=<%= a._id%>>remove</button>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      <div class="pending_appointments">
+        <h4>Appointments Pending to be accepted</h4>
+        <ul>
+          <% pending_appointments.forEach(function(a){ %>
+            <li>
+              <span class="label">Title </span>
+              <span class="title"><%= a.title %></span>
+              <span class="label">Date </span>
+              <span class="date"><%= a.date %></span>
+              <span class="label">Meeting </span>
+              <span class="meeting_user"><%= a.meeting_user %></span>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      <div class="rejected_appointments">
+        <h4>Appointments Rejected</h4>
+        <ul>
+          <% rejected_appointments.forEach(function(a){ %>
+            <li>
+              <span class="label">Title </span>
+              <span class="title"><%= a.title %></span>
+              <span class="label">Date </span>
+              <span class="date"><%= a.date %></span>
+              <span class="label">Meeting </span>
+              <span class="meeting_user"><%= a.meeting_user %></span>
+              <button class="remove" name=<%= a._id%>>remove</button>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+
+    <script src="appointment.js"></script>
+  </body>
+</html>

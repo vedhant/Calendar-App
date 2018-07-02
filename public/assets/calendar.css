@@ -1,0 +1,131 @@
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('Poppins-Regular.ttf');
+}
+
+#main-nav a:nth-child(1){
+  background-color: #BD4932;
+}
+#user{
+  display: none;
+}
+
+#calendar-head i{
+  cursor: pointer;
+}
+
+#main-nav .logged_out{
+  display: none;
+}
+html{
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+body{
+  /* border: 1px solid black; */
+  min-height: 100%;
+  background-color: #EBEEEF;
+}
+
+#calendar-container{
+  position:absolute;
+  width:100%;
+  height: calc(100% - 7vh);
+  /* border: 1px solid black; */
+}
+
+#calendar-dates{
+  height: calc(100% - 7vh - 5vh);
+  padding: 15px;
+}
+
+#calendar-container table{
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  /* height: calc(100% - 7vh - 5vh); */
+  border-collapse: collapse;
+  font-family: Poppins-Regular;
+
+}
+
+#calendar-container table td{
+  text-align: center;
+  overflow: hidden;
+  /* height: calc((100% - 7vh - 5vh)/6); */
+}
+
+.day{
+  /* border: 1px solid black; */
+  width: 14%;
+  background-color: #EBEDF3;
+  color: #2C3339;
+  transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+#calendar-head{
+  background-color: #29384C;
+  height: 12vh;
+  color: #EBEDF3;
+  font-family: Poppins-Bold;
+  font-size: 30px;
+}
+
+.week-name{
+  background-color: #EBEDF3;
+  color: #D93732;
+}
+
+.date{
+  display: inline-block;
+  width: 100%;
+}
+
+.appointment_title{
+  display: inline-block;
+  width: 100%;
+  /* border: 1px solid black; */
+  background-color: #D93732;
+  margin: 1px;
+  margin-left: 2px;
+  margin-right: 2px;
+  color: black;
+  cursor: pointer;
+}
+
+#calendar-head i{
+  width: 25%;
+  text-align: center;
+  transform: translateY(2.5vh);
+}
+
+#calendar-month-year{
+  display: inline-block;
+  width: 48%;
+  text-align: center;
+  transform: translateY(2.5vh);
+}
+
+.day:hover{
+  background-color: rgba(233, 67, 71,0.7);
+}
+
+#today{
+  background-color: rgba(233, 67, 71,1);
+}
+
+blink{
+  animation: blink-animation 1s linear infinite;
+}
+
+@keyframes blink-animation {
+   50% { opacity: 0; }
+}

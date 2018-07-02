@@ -1,0 +1,100 @@
+
+#main-nav .logged_out{
+  display: none;
+}
+
+#main-nav a:nth-child(3){
+  background-color: #BD4932;
+}
+
+#username{
+  display: none;
+}
+
+body{
+  background-color: #EBEEEF;
+}
+
+h2{
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  background-color: #2C3339;
+  /* background: linear-gradient(to right, #D93732, #E94347); */
+  margin-top: 0;
+  padding: 3vh;
+  font-family: Poppins-Bold;
+  color: white;
+}
+
+#appointments_request_list{
+  width: 80%;
+  margin: auto;
+  /* border: 1px solid black; */
+  margin-top: 5vh;
+  font-family: Poppins-Regular;
+}
+#appointments_request_list ul{
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+.appointment_request{
+  list-style-type: none;
+  /* border: 1px solid black; */
+  display: inline-block;
+  width: 100%;
+  border-left: 6px solid rgba(41, 56, 76, 1);
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  color: #2C3339;
+  overflow: hidden;
+  /* transition: background-color 0.2s; */
+}
+
+.appointment_request div{
+  display: inline-block;
+  width: 60%;
+  /* border: 1px solid blue; */
+  float: left;
+}
+
+.appointment_request div span{
+  display: inline-block;
+  width: 40%;
+  text-align: center;
+}
+
+.appointment_request input{
+  /* display: inline-block; */
+  width: 30%;
+  border: none;
+  outline: none;
+  font-family: Poppins-Regular;
+  min-height: 16vh;
+  margin: 0;
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.appointment_request button{
+  display: inline-block;
+  float: right;
+  width: 8%;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  padding: 5px;
+  font-family: Poppins-Regular;
+  font-size: 16px;
+  cursor: pointer;
+  color: #2C3339;
+}
+
+
+.appointment_request:hover{
+  /* background-color: rgba(41, 56, 76, 0.8); */
+  /* color: #EBEDF3; */
+  border-left: 6px solid #D93732;
+}

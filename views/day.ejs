@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Appointments</title>
+    <link href="/assets/day.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <% include partials/nav.ejs %>
+    <h2>Appointments on</h3>
+    <h1><%= day %>   <%= month %>   <%= year %></h2>
+    <ul>
+      <% appointments.forEach(function(a){ %>
+        <li>
+          <span class="label">Title</span>
+          <span class="value"><%= a.title %></span>
+          <span class="label">Meeting</span>
+          <span class="value"><%= a.meeting_user %></span>
+          <span class="label">From</span>
+          <span class="value"><%= a.start %></span>
+          <span class="label">To</span>
+          <span class="value"><%= a.end %></span>
+          <span class="label">Description</span>
+          <span class="value"><%= a.description %></span>
+        </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>

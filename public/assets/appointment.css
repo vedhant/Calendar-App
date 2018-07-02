@@ -1,0 +1,172 @@
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('Poppins-Regular.ttf');
+}
+
+body{
+  background-color: #EBEEEF;
+}
+
+#main-nav .logged_out{
+  display: none;
+}
+#main-nav a:nth-child(2){
+  background-color: #BD4932;
+}
+#add-appointment{
+  width: 50%;
+  /* border: 1px solid black; */
+  margin: auto;
+  font-family: Poppins-Regular;
+  background-color: white;
+  border-radius: 12px;
+}
+
+#add-appointment h3{
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  font-family: Poppins-Bold;
+  width: 100%;
+  text-align: center;
+  background-color: #2C3339;
+  color: #EBEDF3;
+  /* height: 7vh; */
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+form span{
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+  padding-right: 4vw;
+  color: #555555;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+form input{
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  background: transparent;
+  color: #808080;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #808080;
+  font-family: Poppins-Regular;
+}
+
+form button{
+  /* display: inline-block; */
+  width: 12%;
+  font-family: Poppins-Regular;
+  cursor: pointer;
+  border-radius: 400px;
+  border: none;
+  margin-top: 12px;
+  margin-bottom: 7px;
+  font-size: 17px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: #D93732;
+  margin-left: 42%;
+  color: #EBEDF3;
+}
+
+.error{
+  color: red;
+  width: 100%;
+  text-align: center;
+}
+
+.appointment-list{
+  /* border: 1px solid black; */
+  width: 95vw;
+  margin: auto;
+  margin-top: 20px;
+}
+.appointment-list div{
+  background-color: #ECF0F1;
+  border-radius: 9px;
+}
+
+.accepted_appointments{
+  display: inline-block;
+  float: left;
+  width: 33%;
+  /* border: 1px solid black; */
+}
+.pending_appointments{
+  float: none;
+  display: inline-block;
+  width: 33%;
+  margin-left: 0.5vw;
+  /* border: 1px solid black; */
+  /* height: 30vh; */
+}
+.rejected_appointments{
+  float: right;
+  display: inline-block;
+  width: 33%;
+  /* border: 1px solid black; */
+}
+
+h4{
+  width: 90%;
+  margin: auto;
+  margin-top: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center;
+  font-family: Poppins-Bold;
+  background-color: #2C3E50;
+  color: #ECF0F1;
+  border-radius: 6px;
+}
+
+.appointment-list ul li{
+  font-family: Poppins-Regular;
+  display: inline-block;
+  width: 90%;
+  margin: auto;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  background-color: rgba(44, 62, 80, 0.95);
+  list-style-type: none;
+  color: #D9D7AC;
+  border-radius: 5px;
+}
+
+.appointment-list span{
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+  padding: 2px;
+}
+
+.appointment-list .remove{
+  display: inline-block;
+  font-family: Poppins-Regular;
+  margin-left: 40%;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 400px;
+  border: none;
+  font-size: 17px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: white;
+  color: #D93732;
+  outline: none;
+}
+
+.appointment-list .remove:hover{
+  background-color: #D93732;
+  color: white;
+}

@@ -1,0 +1,43 @@
+h1, h2{
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  background-color: #2C3339;
+  color: #EBEDF3;
+  padding: 10px;
+  font-family: Poppins-Bold;
+}
+
+ul{
+  width: 50%;
+  margin: auto;
+  margin-top: 5vh;
+}
+
+li{
+  list-style: none;
+  text-align: center;
+  /* border: 1px solid black; */
+  width: 100%;
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+  border-left: 6px solid rgba(41, 56, 76, 1);
+}
+
+.label{
+  display: inline-block;
+  width: 49%;
+  font-family: Poppins-Bold;
+  padding: 4px;
+}
+
+.value{
+  display: inline-block;
+  width: 48%;
+  font-family: Poppins-Regular;
+  padding: 4px;
+}
+
+li:hover{
+  border-left: 6px solid #D93732;
+}

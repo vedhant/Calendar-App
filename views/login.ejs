@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Login</title>
+    <link href="/assets/login.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <% include partials/nav.ejs %>
+      <div class="container">
+        <div><span>SIGN IN</span></div>
+        <form method="POST">
+          <% if(error !== 'no_error'){ %>
+            <span id="err"><%= error %></span>
+          <% } %>
+          <span>Username</span>
+          <input type="text" placeholder="Enter username" name="username" class="text_input" required />
+          <span>Password</span>
+          <input type="password" placeholder="Enter password" name="password" class="text_input" required />
+          <div id="dummy"></div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+      <script src="login.js"></script>
+  </body>
+</html>

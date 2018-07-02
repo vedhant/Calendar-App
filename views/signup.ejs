@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Sign Up</title>
+    <link href="/assets/signup.css" rel="stylesheet" type="text/css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+      <% include partials/nav.ejs %>
+      <div id="usernames"><%= usernames %></div>
+      <div class="container">
+        <div><span>SIGN UP</span></div>
+        <form method="POST">
+          <% if(error){ %>
+            <span id="err">The username or email id already exists!</span>
+          <% } %>
+          <span>Username</span>
+          <input type="text" placeholder="Enter username" name="username" required />
+          <span>Email Id</span>
+          <input type="text" placeholder="Enter email" name="email" required />
+          <span>Password</span>
+          <input type="password" placeholder="Enter password" name="password" required />
+          <span>Confirm Password</span>
+          <input type="password" placeholder="Enter password again" name="conf_password" required />
+          <div class="g-recaptcha" data-sitekey="6Lc_1WEUAAAAANjO16rRz-NYM7ngIb-2uOvz88x7"></div>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+      <script src="signup.js"></script>
+  </body>
+</html>
